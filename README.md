@@ -1,4 +1,4 @@
-# grocery-application# grocery-application
+# grocery-application
 
 flowchart
 ![flowchart](https://user-images.githubusercontent.com/86500418/147009344-2e28db40-fdc4-4118-9275-1e0dc09354de.png)
