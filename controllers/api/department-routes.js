@@ -1,4 +1,5 @@
 const router = require("express").Router();
+
 const { Product, Department, Aisle, User } = require("../../models");
 
 router.get("/", async (req, res) => {
