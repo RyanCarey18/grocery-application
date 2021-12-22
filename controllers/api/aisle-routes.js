@@ -1,11 +1,15 @@
 const router = require("express").Router();
-const { Aisle, Product } = require("../../models");
+const { Product, Department, Aisle, User } = require("../../models");
 
-// GET all aisles
 router.get("/", async (req, res) => {
   try {
-    const aisleData = await Aisle.findAll({
-      include: [{ model: Product }],
+    aisleData = await Aisle.findAll({
+      include: [
+        {
+          model: Product,
+          attributes: ["product_name", "price"],
+        },
+      ],
     });
     res.status(200).json(aisleData);
   } catch (err) {
