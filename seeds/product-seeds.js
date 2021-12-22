@@ -10,37 +10,37 @@ const productData = [
   {
     product_name: "Yogurt",
     price: 3.69,
-    department_id: 3,
+    department_id: 2,
     aisle_id: 1,
   },
   {
     product_name: "Sour Cream",
     price: 2.49,
-    department_id: 3,
+    department_id: 2,
     aisle_id: 1,
   },
   {
     product_name: "Orange Juice",
     price: 2.39,
-    department_id: 3,
+    department_id: 2,
     aisle_id: 1,
   },
   {
     product_name: "Milk",
     price: 1.49,
-    department_id: 3,
+    department_id: 2,
     aisle_id: 1,
   },
   {
     product_name: "Eggs",
     price: 1.69,
-    department_id: 3,
+    department_id: 2,
     aisle_id: 1,
   },
   {
     product_name: "Cottage Cheese",
     price: 2.39,
-    department_id: 3,
+    department_id: 2,
     aisle_id: 1,
   },
   {
@@ -791,7 +791,7 @@ const productData = [
     product_name: "Pretzels",
     price: 1.99,
     department_id: 1,
-    aisle_id: 16,
+    aisle_id: 17,
   },
   {
     product_name: "Beef Jerky",

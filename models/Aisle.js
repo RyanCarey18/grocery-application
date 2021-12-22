@@ -12,7 +12,7 @@ Aisle.init(
       autoIncrement: true,
     },
     aisle_name: {
-      type: DataTypes.CHAR,
+      type: DataTypes.STRING,
       allowNull: false,
     },
   },
