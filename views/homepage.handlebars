@@ -1,37 +1,36 @@
- <!-- ======= badge Section ======= -->
+      <!-- ======= badge Section ======= -->
   <section id="badge" class="d-flex align-items-center">
     <div class="container text-center position-relative">
-      <h1>BEST MARKET ,BEST DEALS</h1>
-      <h2>OUR PURPOSE IS SERVING YOU </h2>
-      <a href="./login" class="btn-start-shopping scrollto">Start Shopping</a>
+      <h1> GAIN TIME , SAVE ENERGY </h1>
     </div>
-  </section><!-- End badge -->
+  </section>
+  <!-- End badge -->
 
   <main id="main">
 
+ 
 
-    <!-- ======= Counter && Date Section ======= -->
-    <section id="counts" class="counts">
+    <!-- ======= Visitors && Date Section ======= -->
+    <section id="visitors" class="visitors">
       <div class="container">
 
-        <div class="row counters">
+        <div class="row visitors">
 
           <div class="col-lg-6 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Date</p>
+            <span><i class="ri-calendar-event-line"></i></span>
+            <p id = "currentDay"></p>
           </div>
 
           <div class="col-lg-6 col-6 text-center">
-           <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Visitors</p>
+            <span ><i class="ri-user-line"></i></span>
+            <p>Number</p>
           </div>
+
 
         </div>
 
       </div>
-    </section>
-    <!-- End Counter && Date Section -->
-
+    </section><!-- End visitors && Date Section -->
     <!-- ======= About Us Section ======= -->
     <section id="About-us" class="About-us">
       <div class="container">
@@ -39,38 +38,23 @@
         <div class="row">
           <div class="col-lg-4 d-flex align-items-stretch" >
             <div class="content">
-              <h3> About Us ?</h3>
+              <h3>Why Flash Shopping?</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
-              </p>
+               As Benjamin Franklin said :  <br> <span id="quotes">
+               <i class="ri-double-quotes-l"></i> That Time Is Money...<i class="ri-double-quotes-r"></i></span>
+               <br>
+               That's Why <b>Flash Shopping</b> made for, it allows customers to be able to quickly locate products ,faster and more accessible to complete their shopping trip.
 
+
+              </p>
             </div>
           </div>
           <div class="col-lg-8 d-flex align-items-stretch">
             <div class="icon-boxes d-flex flex-column justify-content-center">
               <div class="row">
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <box-icon name='basket'></box-icon>
-                    <h4>Fresh Foods</h4>
-                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-                  </div>
-                </div>
-                <div class="col-xl-4 d-flex align-items-stretch" >
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <box-icon name='badge-check' ></box-icon>
-                    <h4>High Quality</h4>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                  </div>
-                </div>
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <box-icon type='solid' name='badge-dollar'></box-icon>
-                    <h4>Best Deals</h4>
-                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                  </div>
-                </div>
+                {{#each Departments as |department|}}
+                {{> department-details}}
+                {{/each}}
               </div>
             </div>
             <!-- End .content-->
@@ -79,9 +63,96 @@
 
       </div>
     </section>
-    <!-- End About Us Section -->
+    <!-- End About us Section -->
+
+  
 
 
+    <!-- ======= Team Section ======= -->
+
+
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="section-title" >
+              <h2>Team</h2>
+              <p>This Application was released by:</p>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="row">
+
+              <div class="col-lg-6">
+                <div class="member" >
+                  <div class="pic"><img src="/assets/img/" class="img-fluid" alt=""></div>     {{!-- you can add your profile here --}}
+                  <div class="member-info">
+                    <h4>Scott LaBelle</h4>
+                    <span>Your Role In This Project</span>
+                    <div class="social">
+                      <a href=""><i class="ri-mail-line"></i></a>
+                      <a href=""><i class="ri-github-line"></i></a>
+                      <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 mt-4 mt-lg-0">
+                <div class="member" >
+                  <div class="pic"><img src="/assets/img/" class="img-fluid" alt=""></div>     {{!-- you can add your profile here --}}
+                  <div class="member-info">
+                    <h4>Ryan Carey</h4>
+                    <span>Your Role In This Project</span>
+                    <div class="social">
+                      <a href=""><i class="ri-mail-line"></i></a>
+                      <a href=""><i class="ri-github-line"></i></a>
+                      <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 mt-4">
+                <div class="member" >
+                  <div class="pic"><img src="/assets/img/" class="img-fluid" alt=""></div>     {{!-- you can add your profile here --}}
+                  <div class="member-info">
+                    <h4>MERYEM ADIRI</h4>
+                    <span>Your Role In This Project</span>
+                    <div class="social">
+                      <a href=""><i class="ri-mail-line"></i></a>
+                      <a href=""><i class="ri-github-line"></i></a>
+                      <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 mt-4">
+                <div class="member">
+                  <div class="pic"><img src="/assets/img/" class="img-fluid" alt=""></div>     {{!-- you can add your profile here --}}
+                  <div class="member-info">
+                    <h4>Tyler Magoun</h4>
+                    <span>Your Role In This Project</span>
+          
+                    <div class="social">
+                      <a href=""><i class="ri-mail-line"></i></a>
+                      <a href=""><i class="ri-github-line"></i></a>
+                      <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -90,28 +161,27 @@
           <div class="col-lg-4">
             <div class="section-title">
               <h2>Contact</h2>
-              <p>IF you have in concerne ,Please fill out this Form :</p>
+              <p>If you have in questions, Please fill out this Form :</p>
             </div>
           </div>
 
           <div class="col-lg-8" >
-            <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
             <div class="info mt-4">
-              <box-icon name='current-location'></box-icon>
+              <i class="ri-map-pin-line"></i>
               <h4>Location:</h4>
-              <p>899 Willow Street, Manchester , NY 035978</p>
+              <p>899 Willow Street, Manchester , NH 035978</p>
             </div>
             <div class="row">
               <div class="col-lg-6 mt-4">
                 <div class="info">
-                  <i class="bi bi-envelope"></i>
+                  <i class="ri-mail-line"></i>
                   <h4>Email:</h4>
-                  <p>Market@gmail.com</p>
+                  <p>flashShopping@gmail.com</p>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="info w-100 mt-4">
-                  <i class="bi bi-phone"></i>
+                  <i class="ri-phone-line"></i>
                   <h4>Call:</h4>
                   <p>+1 603 895699</p>
                 </div>
@@ -146,6 +216,4 @@
       </div>
     </section>
     <!-- End Contact Section -->
-
-  </main>
-  <!-- End #main -->
+  </main><!-- End #main -->
