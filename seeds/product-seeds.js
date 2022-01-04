@@ -170,7 +170,7 @@ const productData = [
     aisle_id: 4,
   },
   {
-    product_name: "Dinty Moore Beef Stew ",
+    product_name: "Dinty Moore Beef Stew",
     price: 3.69,
     department_id: 1,
     aisle_id: 4,

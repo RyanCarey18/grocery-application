@@ -7,4 +7,5 @@ router.use("/products", productRoutes);
 router.use("/departments", departmentRoutes);
 router.use("/aisles", aisleRoutes);
 
+
 module.exports = router;
