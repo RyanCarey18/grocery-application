@@ -573,38 +573,58 @@ section {
   box-shadow: 0px 5px 25px #dc3545(0, 0, 0, 0.15);
 }
 
+
+/*************************************
+
+/**
+Plus /Minus
+
+
+
+*/
+
+.center{
+  width: 124px;
+    
+  }
+
+  /**********************************
+
+
+
+
 /*--------------------------------------------------------------
-# Team
+# Team and Products
 --------------------------------------------------------------*/
-.team {
+.team , .product {
   background: #fff;
 }
-.team .member {
+.team .member , .product .showProduct  {
   position: relative;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   padding: 30px;
   border-radius: 10px;
   text-align: center;
 }
-.team .member .pic {
+.team .member .pic , .product .showProduct .pic  {
   overflow: hidden;
   width: 150px;
   border-radius: 50%;
   margin: 0 auto 20px auto;
 }
-.team .member .pic img {
+.team .member .pic img , .product .showProduct .pic img {
   transition: ease-in-out 0.3s;
 }
-.team .member:hover img {
+.team .member:hover img  , .product .showProduct:hover img{
   transform: scale(1.1);
 }
-.team .member h4 {
+.team .member h4 ,  .product .showProduct h4 {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 20px;
   color: #dc3545;
 }
-.team .member span {
+.team .member span ,.product .showProduct span {
   display: block;
   font-size: 15px;
   padding-bottom: 10px;
@@ -612,7 +632,7 @@ section {
   font-weight: 500;
   color: purple;
 }
-.team .member span::after {
+.team .member span::after , .product .showProduct span::after {
   content: "";
   position: absolute;
   display: block;
@@ -623,17 +643,17 @@ section {
   left: 50%;
   transform: translateX(-50%);
 }
-.team .member p {
+.team .member p , .product .showProduct p  {
   margin: 10px 0 0 0;
   font-size: 14px;
 }
-.team .member .social {
+.team .member .social ,  .product .showProduct .AddProduct {
   margin-top: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.team .member .social a {
+.team .member .social a  , .product .showProduct .AddProduct a{
   transition: ease-in-out 0.3s;
   display: flex;
   align-items: center;
@@ -643,7 +663,7 @@ section {
   height: 32px;
   background: #a8a5ae;
 }
-.team .member .social a i {
+.team .member .social a i  , .product .showProduct .AddProduct a i {
   color: #fff;
   font-size: 16px;
   margin: 0 2px;
@@ -651,7 +671,11 @@ section {
 .team .member .social a:hover {
   background: purple;
 }
-.team .member .social a + a {
+.product .showProduct .AddProduct a:hover {
+
+  background: purple;
+}
+.team .member .social a + a  ,.product .showProduct .AddProduct a + a{
   margin-left: 8px;
 }
 
