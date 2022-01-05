@@ -9,6 +9,7 @@ module.exports = {
     ecmaVersion: 13,
   },
   rules: {
+    "no-undef": "off",
     "no-undef-init": "error",
     "no-duplicate-case": "error",
     "no-empty": "error",
