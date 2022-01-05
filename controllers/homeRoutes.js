@@ -7,11 +7,14 @@ const { Aisle, Department, Product } = require("../models");
 router.get("/", async (req, res) => {
   try {
     const AllDepartments = await Department.findAll();
+    const allAisles = await Aisle.findAll();
 
     const Departments = AllDepartments.map((dep) => dep.get({ plain: true }));
+    const aisles = allAisles.map((dep) => dep.get({ plain: true }));
 
     res.render("homepage", {
       Departments,
+      aisles,
     });
   } catch (err) {
     console.log(err);
@@ -91,6 +94,39 @@ router.get("/departments/:id", async (req, res) => {
 
     res.render("products", {
       department,
+      products,
+      //logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/aisles/:id", async (req, res) => {
+  try {
+    const aisleData = await Aisle.findByPk(req.params.id, {
+      include: [
+        {
+          model: Product,
+          include: [
+            {
+              model: Aisle,
+              attributes: ["aisle_name"],
+            },
+            {
+              model: Department,
+              attributes: ["department_name"],
+            },
+          ],
+        },
+      ],
+    });
+
+    const aisles = aisleData.get({ plain: true });
+    const products = aisles.products.map((product) => product);
+
+    res.render("products", {
+      aisles,
       products,
       //logged_in: req.session.logged_in,
     });

@@ -16,7 +16,12 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Raleway", sans-serif;
 }
 
@@ -80,7 +85,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-family: "Poppins", sans-serif;
 }
-#header .logo h1 a, #header .logo h1 a:hover {
+#header .logo h1 a,
+#header .logo h1 a:hover {
   color: #ffc220;
   text-decoration: none;
 }
@@ -95,7 +101,8 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     background: purple;
   }
-  #header.header-scrolled, #header .header-container {
+  #header.header-scrolled,
+  #header .header-container {
     background: purple;
   }
   #header .logo {
@@ -104,7 +111,6 @@ h1, h2, h3, h4, h5, h6 {
   #header .logo h1 {
     font-size: 24px;
   }
-
 }
 
 /*--------------------------------------------------------------
@@ -126,7 +132,8 @@ h1, h2, h3, h4, h5, h6 {
 .navbar li {
   position: relative;
 }
-.navbar a, .navbar a:focus {
+.navbar a,
+.navbar a:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -140,15 +147,18 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
   transition: 0.3s;
 }
-.navbar a i, .navbar a:focus i {
+.navbar a i,
+.navbar a:focus i {
   font-size: 12px;
   line-height: 0;
   margin-left: 5px;
 }
-.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover > a {
   color: #dc3545;
 }
-
 
 .navbar .dropdown ul {
   display: block;
@@ -175,7 +185,9 @@ h1, h2, h3, h4, h5, h6 {
 .navbar .dropdown ul a i {
   font-size: 12px;
 }
-.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover > a {
   color: #dc3545;
 }
 .navbar .dropdown:hover > ul {
@@ -252,15 +264,19 @@ h1, h2, h3, h4, h5, h6 {
   overflow-y: auto;
   transition: 0.3s;
 }
-.navbar-mobile a, .navbar-mobile a:focus {
+.navbar-mobile a,
+.navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
   color: #36343a;
 }
-.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover > a {
   color: #dc3545;
 }
-.navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
   margin: 15px;
 }
 .navbar-mobile .dropdown ul {
@@ -283,15 +299,14 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-mobile .dropdown ul a i {
   font-size: 12px;
 }
-.navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover > a {
   color: #dc3545;
 }
 .navbar-mobile .dropdown > .dropdown-active {
   display: block;
 }
-
-
-
 
 /*--------------------------------------------------------------
 # Serach Bar
@@ -306,7 +321,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   padding-bottom: 12px;
 }
-#SerachBar  form {
+#SerachBar form {
   margin-top: 30px;
   background: #fff;
   padding: 6px 10px;
@@ -315,12 +330,12 @@ h1, h2, h3, h4, h5, h6 {
   text-align: left;
   border: 1px solid #e4e3e6;
 }
-#SerachBar  form input[type=text] {
+#SerachBar form input[type="text"] {
   border: 0;
   padding: 4px 8px;
   width: calc(100% - 100px);
 }
-#SerachBar  form input[type=submit] {
+#SerachBar form input[type="submit"] {
   position: absolute;
   top: 0;
   right: -2px;
@@ -335,10 +350,9 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
-#SerachBar .footer-newsletter form input[type=submit]:hover {
+#SerachBar .footer-newsletter form input[type="submit"]:hover {
   background: #dc3545;
 }
-
 
 /*--------------------------------------------------------------
 # Badge Section
@@ -465,7 +479,7 @@ section {
   font-weight: 500;
   line-height: 32px;
   font-size: 24px;
-  color:#00664b
+  color: #00664b;
 }
 .instractions .content ul {
   list-style: none;
@@ -523,17 +537,14 @@ section {
   margin-bottom: 30px;
   color: #ffc220;
 }
-.About-us #quotes{
+.About-us #quotes {
   color: antiquewhite;
   font-size: 20px;
   font-weight: bold;
-  font-family: 'Pacifico', cursive;
-
-
+  font-family: "Pacifico", cursive;
 }
 .About-us .content p {
   margin-bottom: 30px;
-
 }
 .About-us .content .more-btn {
   display: inline-block;
@@ -543,7 +554,6 @@ section {
   border-radius: 50px;
   transition: all ease-in-out 0.4s;
 }
-
 
 .About-us .icon-boxes .icon-box {
   text-align: center;
@@ -573,7 +583,6 @@ section {
   box-shadow: 0px 5px 25px #dc3545(0, 0, 0, 0.15);
 }
 
-
 /*************************************
 
 /**
@@ -583,12 +592,11 @@ Plus /Minus
 
 */
 
-.center{
+.center {
   width: 124px;
-    
-  }
+}
 
-  /**********************************
+/**********************************
 
 
 
@@ -596,35 +604,42 @@ Plus /Minus
 /*--------------------------------------------------------------
 # Team and Products
 --------------------------------------------------------------*/
-.team , .product {
+.team,
+.product {
   background: #fff;
 }
-.team .member , .product .showProduct  {
+.team .member,
+.product .showProduct {
   position: relative;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   padding: 30px;
   border-radius: 10px;
   text-align: center;
 }
-.team .member .pic , .product .showProduct .pic  {
+.team .member .pic,
+.product .showProduct .pic {
   overflow: hidden;
   width: 150px;
   border-radius: 50%;
   margin: 0 auto 20px auto;
 }
-.team .member .pic img , .product .showProduct .pic img {
+.team .member .pic img,
+.product .showProduct .pic img {
   transition: ease-in-out 0.3s;
 }
-.team .member:hover img  , .product .showProduct:hover img{
+.team .member:hover img,
+.product .showProduct:hover img {
   transform: scale(1.1);
 }
-.team .member h4 ,  .product .showProduct h4 {
+.team .member h4,
+.product .showProduct h4 {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 20px;
   color: #dc3545;
 }
-.team .member span ,.product .showProduct span {
+.team .member span,
+.product .showProduct span {
   display: block;
   font-size: 15px;
   padding-bottom: 10px;
@@ -632,7 +647,8 @@ Plus /Minus
   font-weight: 500;
   color: purple;
 }
-.team .member span::after , .product .showProduct span::after {
+.team .member span::after,
+.product .showProduct span::after {
   content: "";
   position: absolute;
   display: block;
@@ -643,17 +659,20 @@ Plus /Minus
   left: 50%;
   transform: translateX(-50%);
 }
-.team .member p , .product .showProduct p  {
+.team .member p,
+.product .showProduct p {
   margin: 10px 0 0 0;
   font-size: 14px;
 }
-.team .member .social ,  .product .showProduct .AddProduct {
+.team .member .social,
+.product .showProduct .AddProduct {
   margin-top: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.team .member .social a  , .product .showProduct .AddProduct a{
+.team .member .social a,
+.product .showProduct .AddProduct a {
   transition: ease-in-out 0.3s;
   display: flex;
   align-items: center;
@@ -663,7 +682,8 @@ Plus /Minus
   height: 32px;
   background: #a8a5ae;
 }
-.team .member .social a i  , .product .showProduct .AddProduct a i {
+.team .member .social a i,
+.product .showProduct .AddProduct a i {
   color: #fff;
   font-size: 16px;
   margin: 0 2px;
@@ -672,10 +692,10 @@ Plus /Minus
   background: purple;
 }
 .product .showProduct .AddProduct a:hover {
-
   background: purple;
 }
-.team .member .social a + a  ,.product .showProduct .AddProduct a + a{
+.team .member .social a + a,
+.product .showProduct .AddProduct a + a {
   margin-left: 8px;
 }
 
@@ -760,7 +780,8 @@ Plus /Minus
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
 }
-.contact .form_contact input, .contact .form_contact textarea {
+.contact .form_contact input,
+.contact .form_contact textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
@@ -771,7 +792,7 @@ Plus /Minus
 .contact .form_contact textarea {
   padding: 10px 12px;
 }
-.contact .form_contact button[type=submit] {
+.contact .form_contact button[type="submit"] {
   background: purple;
   border: 0;
   padding: 10px 30px;
@@ -779,7 +800,7 @@ Plus /Minus
   transition: 0.4s;
   border-radius: 50px;
 }
-.contact .form_contact button[type=submit]:hover {
+.contact .form_contact button[type="submit"]:hover {
   background: #00805d;
 }
 @-webkit-keyframes animate-loading {
@@ -800,7 +821,7 @@ Plus /Minus
 }
 
 /* login  */
-.login  form {
+.login form {
   margin-top: 30px;
   background: #fff;
   padding: 6px 10px;
@@ -809,12 +830,12 @@ Plus /Minus
   text-align: left;
   border: 1px solid #e4e3e6;
 }
-.login  form input[type=text] {
+.login form input[type="text"] {
   border: 0;
   padding: 4px 8px;
   width: calc(100% - 100px);
 }
-.login  form input[type=submit] {
+.login form input[type="submit"] {
   position: absolute;
   top: 0;
   right: -2px;
@@ -829,7 +850,7 @@ Plus /Minus
   border-radius: 50px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
-.login button{
+.login button {
   border: 0;
   background: none;
   font-size: 16px;
@@ -842,7 +863,6 @@ Plus /Minus
   position: relative;
   top: 15px;
   border: 1px solid;
-
 }
 
 /*--------------------------------------------------------------
@@ -873,7 +893,6 @@ Plus /Minus
   margin-bottom: 0;
   font-family: "Raleway", sans-serif;
   color: purple;
-;
 }
 #footer .footer-top h4 {
   font-size: 16px;
@@ -933,12 +952,12 @@ Plus /Minus
   text-align: left;
   border: 1px solid #e4e3e6;
 }
-#footer .footer-newsletter form input[type=email] {
+#footer .footer-newsletter form input[type="email"] {
   border: 0;
   padding: 4px 8px;
   width: calc(100% - 100px);
 }
-#footer .footer-newsletter form input[type=submit] {
+#footer .footer-newsletter form input[type="submit"] {
   position: absolute;
   top: 0;
   right: -2px;
@@ -953,7 +972,7 @@ Plus /Minus
   border-radius: 50px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
-#footer .footer-newsletter form input[type=submit]:hover {
+#footer .footer-newsletter form input[type="submit"]:hover {
   background: #00664b;
 }
 #footer .credits {
