@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const { render } = require("express/lib/response");
 const { Aisle, Department, Product } = require("../models");
 //const withAuth = require("../utils/auth");
 
@@ -8,13 +9,13 @@ router.get("/", async (req, res) => {
   try {
     const AllDepartments = await Department.findAll();
     const allAisles = await Aisle.findAll();
-
-    const Departments = AllDepartments.map((dep) => dep.get({ plain: true }));
-    const aisles = allAisles.map((dep) => dep.get({ plain: true }));
-
+    const departmentsDrop = AllDepartments.map((dep) =>
+      dep.get({ plain: true })
+    );
+    const aislesDrop = allAisles.map((dep) => dep.get({ plain: true }));
     res.render("homepage", {
-      Departments,
-      aisles,
+      departmentsDrop,
+      aislesDrop,
     });
   } catch (err) {
     console.log(err);
@@ -25,11 +26,15 @@ router.get("/", async (req, res) => {
 router.get("/login", async (req, res) => {
   try {
     const AllDepartments = await Department.findAll();
-
-    const Departments = AllDepartments.map((dep) => dep.get({ plain: true }));
+    const allAisles = await Aisle.findAll();
+    const departmentsDrop = AllDepartments.map((dep) =>
+      dep.get({ plain: true })
+    );
+    const aislesDrop = allAisles.map((dep) => dep.get({ plain: true }));
 
     res.render("login", {
-      Departments,
+      departmentsDrop,
+      aislesDrop,
     });
   } catch (err) {
     console.log(err);
@@ -90,15 +95,19 @@ router.get("/departments/:id", async (req, res) => {
     });
     const AllDepartments = await Department.findAll();
 
-    const Departments = AllDepartments.map((dep) => dep.get({ plain: true }));
-
+    const allAisles = await Aisle.findAll();
+    const departmentsDrop = AllDepartments.map((dep) =>
+      dep.get({ plain: true })
+    );
+    const aislesDrop = allAisles.map((dep) => dep.get({ plain: true }));
     const department = departmentData.get({ plain: true });
     const products = department.products.map((product) => product);
 
     res.render("products", {
       department,
       products,
-      Departments,
+      departmentsDrop,
+      aislesDrop,
       //logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -125,6 +134,12 @@ router.get("/aisles/:id", async (req, res) => {
         },
       ],
     });
+    const AllDepartments = await Department.findAll();
+    const allAisles = await Aisle.findAll();
+    const departmentsDrop = AllDepartments.map((dep) =>
+      dep.get({ plain: true })
+    );
+    const aislesDrop = allAisles.map((dep) => dep.get({ plain: true }));
 
     const aisles = aisleData.get({ plain: true });
     const products = aisles.products.map((product) => product);
@@ -132,6 +147,8 @@ router.get("/aisles/:id", async (req, res) => {
     res.render("products", {
       aisles,
       products,
+      departmentsDrop,
+      aislesDrop,
       //logged_in: req.session.logged_in,
     });
   } catch (err) {
