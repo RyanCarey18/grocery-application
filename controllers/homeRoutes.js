@@ -94,6 +94,7 @@ router.get("/departments/:id", async (req, res) => {
       ],
     });
     const AllDepartments = await Department.findAll();
+
     const allAisles = await Aisle.findAll();
     const departmentsDrop = AllDepartments.map((dep) =>
       dep.get({ plain: true })
