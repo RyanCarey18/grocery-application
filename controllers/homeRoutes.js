@@ -88,6 +88,9 @@ router.get("/departments/:id", async (req, res) => {
         },
       ],
     });
+    const AllDepartments = await Department.findAll();
+
+    const Departments = AllDepartments.map((dep) => dep.get({ plain: true }));
 
     const department = departmentData.get({ plain: true });
     const products = department.products.map((product) => product);
@@ -95,6 +98,7 @@ router.get("/departments/:id", async (req, res) => {
     res.render("products", {
       department,
       products,
+      Departments,
       //logged_in: req.session.logged_in,
     });
   } catch (err) {
