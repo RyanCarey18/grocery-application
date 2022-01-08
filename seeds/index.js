@@ -1,4 +1,4 @@
-const seedDepartment = require(".//department-seeds");
+const seedDepartment = require("./department-seeds");
 const seedAisle = require("./aisle-seeds");
 const seedProduct = require("./product-seeds");
 const seedUser = require("./user-seeds");
