@@ -1,10 +1,9 @@
+//adds a button to every product to be selected.
 const addButtonHandler = async (event) => {
   event.preventDefault();
 
-  // Collect product id
   const product_id = event.target.dataset.id;
-
-  //if there is a comment then send a request to server to create new comment
+  //send item data to be added to cart.
   if (product_id) {
     const response = await fetch("/api/cart", {
       method: "POST",
@@ -12,32 +11,11 @@ const addButtonHandler = async (event) => {
       headers: { "Content-Type": "application/json" },
     });
 
-    //if the request is okay refresh the post page
-    if (response.ok) {
-    } else {
+    if (!response.ok) {
       alert(response.statusText);
     }
   }
 };
-
-const cartButtonHandler = async (event) => {
-  event.preventDefault();
-
-  const response = await fetch("/api/cart", {
-    method: "GET",
-  });
-
-  //if the request is okay refresh the post page
-  if (response.ok) {
-  } else {
-    alert(response.statusText);
-  }
-}
-
-
-document
-  .querySelectorAll(".cart-btn")
-  .forEach((btn) => btn.addEventListener("click", cartButtonHandler));
 
 document
   .querySelectorAll(".add-btn")
