@@ -13,7 +13,9 @@ router.get("/", async (req, res) => {
       dep.get({ plain: true })
     );
     const aislesDrop = allAisles.map((dep) => dep.get({ plain: true }));
+    const cart = req.session.cart;
     res.render("homepage", {
+      cart,
       departmentsDrop,
       aislesDrop,
     });
@@ -31,8 +33,10 @@ router.get("/login", async (req, res) => {
       dep.get({ plain: true })
     );
     const aislesDrop = allAisles.map((dep) => dep.get({ plain: true }));
+    const cart = req.session.cart;
 
     res.render("login", {
+      cart,
       departmentsDrop,
       aislesDrop,
     });
@@ -62,13 +66,12 @@ router.get("/Products", async (req, res) => {
       ],
     });
 
+    const cart = req.session.cart;
     const products = AllProducts.map((prod) => prod.get({ plain: true }));
-
     const AllDepartments = await Department.findAll();
-
     const Departments = AllDepartments.map((dep) => dep.get({ plain: true }));
 
-    res.render("products", { products, Departments });
+    res.render("products", { products, Departments, cart });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -102,8 +105,9 @@ router.get("/departments/:id", async (req, res) => {
     const aislesDrop = allAisles.map((dep) => dep.get({ plain: true }));
     const department = departmentData.get({ plain: true });
     const products = department.products.map((product) => product);
-
+    const cart = req.session.cart;
     res.render("products", {
+      cart,
       department,
       products,
       departmentsDrop,
@@ -143,8 +147,10 @@ router.get("/aisles/:id", async (req, res) => {
 
     const aisles = aisleData.get({ plain: true });
     const products = aisles.products.map((product) => product);
+    const cart = req.session.cart;
 
     res.render("products", {
+      cart,
       aisles,
       products,
       departmentsDrop,
@@ -155,5 +161,41 @@ router.get("/aisles/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+//Render the carts page
+router.get("/cart", async (req, res) => {
+  try {
+    const AllDepartments = await Department.findAll();
+    const allAisles = await Aisle.findAll();
+    const productsData = await Product.findAll({
+      where: { id: req.session.cart },
+      include: [
+        {
+          model: Aisle,
+          attributes: ["aisle_name"],
+        },
+        {
+          model: Department,
+          attributes: ["department_name"],
+        },
+      ],
+    });
+    const departmentsDrop = AllDepartments.map((dep) =>
+      dep.get({ plain: true }));
+    const aislesDrop = allAisles.map((dep) => dep.get({ plain: true }));
+    const products = productsData.map((dep) => dep.get({ plain: true }));
+    const cart = req.session.cart;
+
+    res.render("cart", {
+      cart,
+      products,
+      departmentsDrop,
+      aislesDrop
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 
 module.exports = router;

@@ -1,28 +1,35 @@
 const router = require("express").Router();
-const { Product } = require("../../models");
 
 router.post("/", async (req, res) => {
   try {
     req.session.save(() => {
+      req.session.hello = true;
       if (req.session.cart) {
-        req.session.cart.push(req.body.product_id);
+        if (!req.session.cart.includes(req.body.product_id)) {
+          req.session.cart.push(req.body.product_id);
+        }
       } else {
         req.session.cart = [req.body.product_id];
       }
 
-      res.status(200).json({ message: "shopping" });
+      res.status(200).end();
     });
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
-router.get("/", async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
-    const cartData = await Product.findAll({
-      where: { id: req.session.cart },
+    req.session.save(() => {
+      index = req.session.cart.indexOf(req.params.id);
+
+      if (index > -1) {
+        req.session.cart.splice(index, 1);
+      }
+
+      res.status(200).end();
     });
-    res.status(200).json(cartData);
   } catch (err) {
     res.status(500).json(err);
   }

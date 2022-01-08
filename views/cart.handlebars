@@ -1,0 +1,35 @@
+<main id="main" style="margin-top: 95px;">
+  <div class="container">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Aisle</th>
+            <th scope="col">Delete</th>      
+          </tr>
+        </thead>
+        {{#each products as |product|}}
+          <tbody>
+            <tr>
+              <th scope="row">
+                <div> <img src="/assets/img/foodsIcons/{{product_name}}.png" alt="" class="rounded-circle"  style="
+                    max-width: 108px;
+                    min-width: 108px;">
+                </div>
+              </th>
+                <th scope="col">{{product_name}}</th>
+                <th scope="col">{{price}}</th>
+                <th scope="col"> {{aisle.aisle_name}} </th>
+                <th scope="col"><button id="del-btn" data-id="{{id}}"><i data-id="{{id}}" class="del-btn fa-2x ri-close-circle-line"></i></button></th>
+              </tr>
+          </tbody>
+        {{/each}}
+      </table>
+    </div>
+  </div>
+</main>
+
+<script src="/assets/js/cart.js"></script>
