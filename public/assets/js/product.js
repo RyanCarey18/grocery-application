@@ -2,7 +2,7 @@ const addButtonHandler = async (event) => {
   event.preventDefault();
 
   // Collect product id
-  const product_id = document.getElementById("add-btn").getAttribute("data-id");
+  const product_id = event.target.dataset.id;
 
   //if there is a comment then send a request to server to create new comment
   if (product_id) {
@@ -23,17 +23,17 @@ const addButtonHandler = async (event) => {
 const cartButtonHandler = async (event) => {
   event.preventDefault();
 
-    const response = await fetch("/api/cart", {
-      method: "GET",
-    });
+  const response = await fetch("/api/cart", {
+    method: "GET",
+  });
 
-    //if the request is okay refresh the post page
-    if (response.ok) {
-    } else {
-      alert(response.statusText);
-    }
+  //if the request is okay refresh the post page
+  if (response.ok) {
+  } else {
+    alert(response.statusText);
   }
-};
+}
+
 
 document
   .querySelectorAll(".cart-btn")
