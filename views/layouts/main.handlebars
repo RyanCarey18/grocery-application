@@ -6,6 +6,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Flash Shopping Application </title>
+        <!-- Add icon in the tab's Windows of the page -->
+    <link rel="icon" href="/assets/img/market_logo.png" type="image/icon type">
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -64,8 +66,18 @@
                </form>
              </div>
             </li>
-            <li><a class="nav-link scrollto" href="/login">SIGN IN / SIGN UP</a></li>
-            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+
+    {{#if logged_in}}
+            <li><a class="nav-link scrollto" href="#" id="log_out">Hi {{username}} \ Logout</a></li>
+    {{else}}
+ <li><a class="nav-link scrollto " href="/login" id ="singIn_singUp">SING IN / SIGN UP</a></li>
+
+    {{/if}}
+
+
+
+
+            <li><a class="nav-link scrollto" href="/#contact">Contact</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
@@ -137,11 +149,21 @@
   <!-- boxicons js-->
   <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
 
-  {{!-- <script src="assets/js/main.js"></script> --}}
+
   {{!-- <script src="assets/js/contact.js"></script> --}}
 
-  <!-- // Use Moment.js  -->
+ {{!-- // Use Moment.js  --}}
+ <script>
+let today=moment();
+let today_Date_Hour = today.format("dddd, MMMM Do YYYY, h:mm:ss a");
+$("#currentDay").text(today_Date_Hour);
 
+</script>
+
+
+  {{#if logged_in}}
+  <script src="assets/js/logout.js"></script>
+  {{/if}}
 
 
   <script>
