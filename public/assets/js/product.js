@@ -32,7 +32,8 @@ const cartButtonHandler = async (event) => {
   } else {
     alert(response.statusText);
   }
-};
+}
+
 
 document
   .querySelectorAll(".cart-btn")

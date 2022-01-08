@@ -26,14 +26,14 @@
           
           <div class="content m-3">
             <h3>SIGN IN</h3>
-            <form class="login mt-4">
+            <form class="login mt-4 login-form">
               <div class="row">
                 <div class="col-lg-12 form-group">
-                  <input type="text" name="email" class="form-control" id="email" placeholder="Your email" required>
+                  <input type="text" name="email-login" class="form-control" id="email-login" placeholder="Your email" required>
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="password" class="form-control" name="password" id="password" placeholder="*******" required>
+                <input type="password" class="form-control" name="password-login" id="password-login" placeholder="*******" required>
               </div>
               <div class="text-center"><button type="submit">Login</button></div>
             </form>
@@ -50,28 +50,30 @@
           
           <div class="content m-3 ">
             <h3>SIGN UP</h3>
-            <form action=""  role="form" class="login mt-4">
+            <form  class="login mt-4 signup-form ">
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="FirstName" class="form-control" id="FirstName" placeholder="First Name" required>
+                  <input type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="text" name="LastName" class="form-control" id="LastName" placeholder="Last Name" required>
+                  <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Last Name" required>
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your email" required>
+                <input type="email" class="form-control" name="email-signup" id="email-signup" placeholder="Your email" required>
               </div>
               
               <div class="form-group mt-3">
-                  <input type="password" class="form-control" name="password" id="password" placeholder="**********" required>
+                  <input type="password" class="form-control" name="password-signup" id="password-signup" placeholder="**********" required>
                 </div>
               
                 <div class="form-group mt-3">
-                  <input type="Cpassword" class="form-control" name="Cpassword" id="Cpassword" placeholder="**********" required>
+                  <input type="password" class="form-control" name="Cpassword-signup" id="Cpassword-signup" placeholder="**********" required>
                 </div>
 
-              <div class="text-center"><button type="submit">Create Account</button></div>
+              <div class="text-center">
+                <button type="submit">Create Account</button>
+                </div>
             </form>
 
           </div>
@@ -87,3 +89,6 @@
   </section><!-- End Login Section -->
 
   </main><!-- End #main -->
+
+    <script src="assets/js/login.js"></script>
+
