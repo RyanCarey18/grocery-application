@@ -66,18 +66,16 @@
                </form>
              </div>
             </li>
+            {{#if logged_in}}
+                    <li><a class="nav-link scrollto" href="#" id="log_out">Hi {{username}} \ Logout</a></li>
+            {{else}}
+        <li><a class="nav-link scrollto " href="/login" id ="singIn_singUp">SIGN IN / SIGN UP</a></li>
 
-    {{#if logged_in}}
-            <li><a class="nav-link scrollto" href="#" id="log_out">Hi {{username}} \ Logout</a></li>
-    {{else}}
- <li><a class="nav-link scrollto " href="/login" id ="singIn_singUp">SING IN / SIGN UP</a></li>
-
-    {{/if}}
-
-
-
-
-            <li><a class="nav-link scrollto" href="/#contact">Contact</a></li>
+            {{/if}}
+            {{#if cart}}
+            <li><a class="nav-link scrollto" href="/cart">Cart</a></li>
+            {{/if}}
+            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
@@ -162,7 +160,7 @@ $("#currentDay").text(today_Date_Hour);
 
 
   {{#if logged_in}}
-  <script src="assets/js/logout.js"></script>
+  <script src="/assets/js/logout.js"></script>
   {{/if}}
 
 

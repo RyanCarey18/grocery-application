@@ -9,7 +9,7 @@
           <h3>Add Product to the Shopping List :</h3>
 
 <!-- Large modal -->
-<button type="button" class="cart-btn btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="ri-shopping-basket-line"></i></button>
+<a href="/api/cart"button" class="cart-btn btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="ri-shopping-basket-line"></i></a>
 
   <!-- Modal -->
   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -20,151 +20,8 @@
               <div class="modal-header">
           <h4 class="modal-title">Shopping List : </h4>
         </div>
-        <div class="modal-body">
+        < class="modal-body">
 
-<div class="table-responsive-xl">
-  <table class="table">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col">Name</th>
-      <th scope="col">Price</th>
-      <th scope="col">Aisle</th>
-      <th scope="col">Quantity</th>
-      <th scope="col">Delete</th>      
-</tr>
-</thead>
-  <tbody>
-    <tr>
-      <th scope="row">
-        <div> <img src="assets/img/usingApp.jpg" alt="" class="rounded-circle"  style="
-    max-width: 108px;
-    min-width: 108px;
-"></div>
-      </th>
-                        <th scope="col">Milk</th>
-                        <th scope="col">1.89 $</th>
-                        <th scope="col"> 2 </th>
-                        <th scope="col">
-
-                            <div class="center">
-                                <p>
-                                  </p>
-                                <p></p>
-                                <p>
-                                  </p><div class="input-group">
-                                      <span class="input-group-btn">
-                                          <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
-                                            <span class="glyphicon glyphicon-minus">-</span>
-                                          </button>
-                                      </span>
-                                      <input type="text" name="quant[2]" class="form-control input-number" value="10" min="1" max="100">
-                                      <span class="input-group-btn">
-                                          <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
-                                              <span class="glyphicon glyphicon-plus"></span>
-                                          </button>
-                                      </span>
-                                  </div>
-                                <p></p>
-                            </div>
-
-                        </th>
-                        <th scope="col"><a href="#"><i class=" fa-2x ri-close-circle-line"></i></a></i></th>
-
-    </tr>
-  </tbody>
-
-
-   <tbody>
-    <tr>
-      <th scope="row">
-              <div> <img src="assets/img/usingApp.jpg" alt="" class="rounded-circle"  style="
-    max-width: 108px;
-    min-width: 108px;
-"></div>
-      </th>
-                        <th scope="col">Milk</th>
-                        <th scope="col">1.89 $</th>
-                        <th scope="col"> 2 </th>
-                        <th scope="col">
-
-                            <div class="center">
-                                <p>
-                                  </p>
-                                <p></p>
-                                <p>
-                                  </p><div class="input-group">
-                                      <span class="input-group-btn">
-                                          <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
-                                            <span class="glyphicon glyphicon-minus">-</span>
-                                          </button>
-                                      </span>
-                                      <input type="text" name="quant[2]" class="form-control input-number" value="10" min="1" max="100">
-                                      <span class="input-group-btn">
-                                          <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
-                                              <span class="glyphicon glyphicon-plus"></span>
-                                          </button>
-                                      </span>
-                                  </div>
-                                <p></p>
-                            </div>
-
-                        </th>
-                                      <th scope="col"><a href="#"><i class=" fa-2x ri-close-circle-line"></i></a></i></th>
-
-    </tr>
-  </tbody>
-  </table>
-</div>
-          {{!-- <div class="row">
-                <table class="table table-hover">
-                    <thead>
-                      <tr>
-                        <th scope="col"></th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Aisle</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Delete</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">
-                            <img src="assets/img/usingApp.jpg" class="img-fluid" alt="">
-                          </th>
-                        <th scope="col">Milk</th>
-                        <th scope="col">1.89 $</th>
-                        <th scope="col"> 2 </th>
-                        <th scope="col">
-
-                            <div class="center">
-                                <p>
-                                  </p>
-                                <p></p>
-                                <p>
-                                  </p><div class="input-group">
-                                      <span class="input-group-btn">
-                                          <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
-                                            <span class="glyphicon glyphicon-minus">-</span>
-                                          </button>
-                                      </span>
-                                      <input type="text" name="quant[2]" class="form-control input-number" value="10" min="1" max="100">
-                                      <span class="input-group-btn">
-                                          <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
-                                              <span class="glyphicon glyphicon-plus"></span>
-                                          </button>
-                                      </span>
-                                  </div>
-                                <p></p>
-                            </div>
-
-                        </th>
-                        <th scope="col"><button><i class=" fa-2x ri-close-circle-line"></i></button></i></th>
-                      </tr>
-                    </tbody>
-                  </table>
-              </div> --}}
         </div>
         <div class="modal-footer">
           
@@ -195,82 +52,6 @@
       <div class="container">
 
         <div class="row">
-          {{!-- <div class="col-lg-5">
-            <div class="section-title">
-              <!-- <h2>Department : Dep Name </h2>
-              <p>Aile : Aile Number  </p> -->
-
-              <div class="row">
-                <table class="table table-hover">
-                    <thead>
-                      <tr>
-                        <th scope="col"></th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Aisle</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Delete</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">
-                            <img src="assets/img/usingApp.jpg" class="img-fluid" alt="" style="width: 70px;">
-                        </th>
-                        <th scope="col">Milk</th>
-                        <th scope="col">1.89 $</th>
-                        <th scope="col"> 2 </th>
-                        <th scope="col">
-
-                            <div class="center">
-                                <p>
-                                  </p>
-                                <p></p>
-                                <p>
-                                  </p><div class="input-group">
-                                      <span class="input-group-btn">
-                                          <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
-                                            <span class="glyphicon glyphicon-minus">-</span>
-                                          </button>
-                                      </span>
-                                      <input type="text" name="quant[2]" class="form-control input-number" value="10" min="1" max="100">
-                                      <span class="input-group-btn">
-                                          <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
-                                              <span class="glyphicon glyphicon-plus">+</span>
-                                          </button>
-                                      </span>
-                                  </div>
-                                <p></p>
-                            </div>
-
-                        </th>
-                        <th scope="col"><button><i class=" fa-2x ri-close-circle-line"></i></button></i></th>
-                      </tr>
-                    </tbody>
-                  </table>
-              </div>
-
-            
-              <!-- ********************* -->
-
-
-              <div class="row">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="row"><button> Remove All </button></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td><span> Total Cost : 00.00 $ </span></td>
-                          </tr>
-                    </thead>
-                  </table>
-              </div>
-              
-            </div>
-          </div> --}}
           <div class="col-lg-12">
             <div class="row">
 
@@ -291,8 +72,7 @@
   </main><!-- End #main -->
 
   <script src="/assets/js/product.js"></script>
-  
-  
-  
 
-  
+  <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
