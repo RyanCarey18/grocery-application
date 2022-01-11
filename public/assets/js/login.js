@@ -15,7 +15,7 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      alert("Hi ,Welcome come back.");
+      alert("Hi ,Welcome back.");
       document.location.replace("/");
 
 
