@@ -15,7 +15,9 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
+      alert("Hi ,Welcome come back.");
       document.location.replace("/");
+
 
     } else {
       alert("Failed to log in.");
@@ -44,13 +46,20 @@ const signupFormHandler = async (event) => {
       headers: { "Content-Type": "application/json" },
     });
 
+    console.log ("response = " +response)
+
     if (response.ok) {
+      alert("Congratulations !! , You have  just have created a new account");
       document.location.replace("/");
-      console.log("new user has just created");
+    
     } else {
-      alert("Failed to sign up.");
+      alert("Failed to create an account");
+      document.location.replace("/");
     }
   }
+
+  alert("Sorry , Your password and confirmation password do not match , Please try again ");
+  document.location.replace("/login");
 };
 
 document.querySelector(".login-form").addEventListener("submit", loginFormHandler);

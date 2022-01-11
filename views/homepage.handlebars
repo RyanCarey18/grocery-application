@@ -10,27 +10,32 @@
 
  
 
-    <!-- ======= Visitors && Date Section ======= -->
+    <!-- ======= UserName && Date Section ======= -->
     <section id="visitors" class="visitors">
       <div class="container">
 
         <div class="row visitors">
 
-          <div class="col-lg-6 col-6 text-center">
+         {{#if logged_in }}
+            <div class="col-lg-6 col-6 text-center">
             <span><i class="ri-calendar-event-line"></i></span>
             <p id = "currentDay"></p>
           </div>
-
           <div class="col-lg-6 col-6 text-center">
             <span ><i class="ri-user-line"></i></span>
-            <p>Number</p>
+            <p>Welcome , {{username}} </p>
           </div>
-
+         {{else}}
+              <div class="row text-center">
+            <span><i class="ri-calendar-event-line"></i></span>
+            <p id = "currentDay"></p>
+          </div>
+          {{/if}}
 
         </div>
 
       </div>
-    </section><!-- End visitors && Date Section -->
+    </section><!-- End Username && Date Section -->
     <!-- ======= About Us Section ======= -->
     <section id="About-us" class="About-us">
       <div class="container">
@@ -78,7 +83,7 @@
           <div class="col-lg-4">
             <div class="section-title" >
               <h2>Team</h2>
-              <p>This Application was released by:</p>
+              <p>This Application was released by</p>
             </div>
           </div>
           <div class="col-lg-8">
@@ -105,7 +110,9 @@
                   <div class="pic"><img src="/assets/img/" class="img-fluid" alt=""></div>     {{!-- you can add your profile here --}}
                   <div class="member-info">
                     <h4>Ryan Carey</h4>
-                    <span>Front end : Develop shopping Cart/ Back-End: Cart-route  </span>
+                    <span>Front end : Develop shopping Cart
+                        <br >
+                         Back-End: Cart-route  </span>
                     <div class="social">
                       <a href="mailto:ryan.carey18@gmail.com"><i class="ri-mail-line"></i></a>
                       <a href="https://github.com/RyanCarey18"><i class="ri-github-line"></i></a>
@@ -120,7 +127,9 @@
                   <div class="pic"><img src="/assets/img/" class="img-fluid" alt=""></div>     {{!-- you can add your profile here --}}
                   <div class="member-info">
                     <h4>MERYEM ADIRI</h4>
-                    <span>Front end :  Create templates , Develop contact , login/sign up forms/ Back-End :  Authentification</span>
+                    <span>Front end :  Create templates , Develop contact , login/sign up forms
+                        <br >
+                        Back-End :  Authentification</span>
                     <div class="social">
                       <a href="mailto:adiri.meryem.mw@gmail.com"><i class="ri-mail-line"></i></a>
                       <a href="https://github.com/MERYEM-AD"><i class="ri-github-line"></i></a>
@@ -135,7 +144,9 @@
                   <div class="pic"><img src="/assets/img/" class="img-fluid" alt=""></div>     {{!-- you can add your profile here --}}
                   <div class="member-info">
                     <h4>Tyler Magoun</h4>
-                    <span>Front end : Create Admin page / Back-End : Develop Admin route </span>
+                    <span>Front end : Create Admin page 
+                      <br >
+                       Back-End : Develop Admin route </span>
           
                     <div class="social">
                       <a href="mailto:#"><i class="ri-mail-line"></i></a>
@@ -161,7 +172,7 @@
           <div class="col-lg-4">
             <div class="section-title">
               <h2>Contact</h2>
-              <p>If you have in questions, Please fill out this Form :</p>
+              <p>If you have in questions, Please fill out this Form </p>
             </div>
           </div>
 
@@ -176,7 +187,7 @@
                 <div class="info">
                   <i class="ri-mail-line"></i>
                   <h4>Email:</h4>
-                  <p>flashShopping@gmail.com</p>
+                  <p>flashshoppingapp@gmail.com</p>
                 </div>
               </div>
               <div class="col-lg-6">
@@ -188,15 +199,27 @@
               </div>
             </div>
 
-            <form action=""  role="form" class="form_contact mt-4">
+            <form class="form_contact mt-4">
+              
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                     {{#if logged_in }}
+     <input type="text" name="name" class="form-control" id="name"  value ="{{username}}" disabled>
+                     {{else}}
+     <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                        {{/if }}
                 </div>
+
+
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                     {{#if logged_in }}
+     <input type="text" name="email" class="form-control" id="email"  value ="{{userEmail}}" disabled>
+                     {{else}}
+                 <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                        {{/if }}
                 </div>
               </div>
+
               <div class="form-group mt-3">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
               </div>
@@ -219,5 +242,8 @@
   </main><!-- End #main -->
   
   <script src="assets/js/main.js"></script>
+    <script src="/assets/js/contact.js"></script>
+
+
 
   

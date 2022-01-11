@@ -13,14 +13,14 @@ router.get("/", async (req, res) => {
     );
     const aislesDrop = allAisles.map((dep) => dep.get({ plain: true }));
     const cart = req.session.cart;
-
     if (req.session.logged_in) {
       res.render("homepage", {
         cart,
         departmentsDrop,
         aislesDrop,
         logged_in: req.session.logged_in,
-        username : req.session.username
+        username : req.session.username,
+        userEmail :req.session.userEmail
       });
     } else {
       res.render("homepage", {
@@ -150,7 +150,7 @@ router.get("/login", async (req, res) => {
 });
 
 //Render the carts page
-router.get("/cart", async (req, res) => {
+router.get("/cart", withAuth ,async (req, res) => {
   try {
     const AllDepartments = await Department.findAll();
     const allAisles = await Aisle.findAll();
@@ -180,7 +180,9 @@ router.get("/cart", async (req, res) => {
       cart,
       products,
       departmentsDrop,
-      aislesDrop
+      aislesDrop,
+      logged_in: req.session.logged_in,
+      username : req.session.username
     });
   } catch (err) {
     res.status(500).json(err);
