@@ -57,9 +57,10 @@ const signupFormHandler = async (event) => {
       document.location.replace("/");
     }
   }
-
+  else {
   alert("Sorry , Your password and confirmation password do not match , Please try again ");
   document.location.replace("/login");
+  }
 };
 
 document.querySelector(".login-form").addEventListener("submit", loginFormHandler);
