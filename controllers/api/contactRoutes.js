@@ -1,6 +1,6 @@
 
 const router = require("express").Router();
-require("dotenv").config();
+// require("dotenv").config();
 
 router.post("/", async (req, res) => {
     try {
@@ -11,13 +11,16 @@ router.post("/", async (req, res) => {
         const transporter = nodemailer.createTransport({
           service: 'gmail',
           auth: {
-            user: process.env.COMPANY_EMAIL,
-            pass: process.env.COMPANY_PW
+            // user: process.env.COMPANY_EMAIL,
+            // pass: process.env.COMPANY_PW
+            user :'flashshoppingapp@gmail.com',
+            pass : 'bootcamp2021'
           }
         });
         
         const mailOptions = {
-          to: process.env.COMPANY_EMAIL,
+          // to: process.env.COMPANY_EMAIL,
+          to :'flashshoppingapp@gmail.com',
           subject: req.body.userSubject,
           html: `
           <h1 style ="color :red;" >Thank you for Your Message to <i> flash Shopping </i></h1> 
