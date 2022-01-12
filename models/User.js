@@ -66,7 +66,7 @@ User.init(
       },
       beforeUpdate: async (updatedUserData) => {
         if (updatedUserData.password) {
-        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+          updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
         }
         return updatedUserData;
       },
@@ -76,7 +76,7 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: "user",
   }
 );
 

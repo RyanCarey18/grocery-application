@@ -34,33 +34,33 @@ router.post("/", async (req, res) => {
     const nodemailer = require("nodemailer");
     require("dotenv").config();
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      service: "gmail",
       auth: {
         // user: process.env.COMPANY_EMAIL,
         // pass: process.env.COMPANY_PW
-        user :'flashshoppingapp@gmail.com',
-        pass : 'bootcamp2021'
+        user :"flashshoppingapp@gmail.com",
+        pass : "bootcamp2021"
       }
     });
-    
+
     const mailOptions = {
       to: req.body.email,
-      subject: 'New User data',
+      subject: "New User data",
       html: `
       <h1 style ="color :red;"> <i> Flash Shopping </i> team, thank you for placing your trust in our application</h1> 
       <h3 style ="color :purple; font-family:"cursive";>Welcome : ${req.body.first_name} ${req.body.last_name}  </h3>
       <h3 style ="color :purple; font-family:"cursive">Your Email : ${req.body.email} </h3>
-      <h3 style ="color :purple; font-family:"cursive"> Your Password : </h3> <p>${req.body.password} </p>`,         
+      <h3 style ="color :purple; font-family:"cursive"> Your Password : </h3> <p>${req.body.password} </p>`,
     };
-    
-transporter.sendMail(mailOptions, function(error, info){
+
+    transporter.sendMail(mailOptions, function(error, info){
       if (error) {
         console.log(error);
 
 
       } else {
-        console.log('Email sent: ' + info.response);
-        res.redirect('/');
+        console.log("Email sent: " + info.response);
+        res.redirect("/");
       }
 
     });
