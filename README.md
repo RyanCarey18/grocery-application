@@ -16,13 +16,13 @@ Click [here](https://vast-ocean-43647.herokuapp.com/) to go to the deployed appl
 
 - [Usage](#Usage)
 
-- [Contributing](#Contributing)
-
-- [Tests](#Tests)
-
 - [License](#License)
 
+- [Contributing](#Contributing)
+
 - [Questions](#Questions)
+
+- [Pictures](#Pictures)
 
 ## Installation
 
@@ -56,7 +56,7 @@ Not accepting contributions.
 
 ## Questions
 
-If you have any questions about the repository you can contact me us at our respective links.
+If you have any questions about the repository you can contact us at our respective links.
 
 Ryan:
  Email me at ryan.carey18@gmail.com. Otherwise you can find me on GitHub [here](https://github.com/ryancarey18).
