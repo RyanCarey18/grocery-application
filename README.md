@@ -14,6 +14,8 @@ Click [here](https://vast-ocean-43647.herokuapp.com/) to go to the deployed appl
 
 - [Installation](#Installation)
 
+- [Technologies](#Technologies)
+
 - [Usage](#Usage)
 
 - [License](#License)
@@ -41,6 +43,20 @@ npm i
 node run seed
 
 ```
+
+## Technologies
+
+- Handlebars.js
+- HTML
+- JS
+- CSS
+- Express.js
+- Node.js
+- Sequelize
+- MySql
+- Nodemailer
+- BCrypt
+- Heroku
 
 ## Usage
 
